@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore auth.json which carries the tokens
+src/config/auth.json
