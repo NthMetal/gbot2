@@ -5,7 +5,29 @@
   "main": "bot.ts",
   "scripts": {
     "dev": "nodemon ./src/bot.ts",
-    "test": "test"
+    "test": "nyc ts-mocha -p ./tsconfig.json ./**/*.spec.ts || false"
+  },
+  "nyc": {
+    "include": [
+      "**/*.ts",
+      "**/*.tsx"
+    ],
+    "exclude": [
+      "**/*.spec.ts"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
   },
   "repository": {
     "type": "git",
@@ -22,6 +44,7 @@
   "homepage": "https://github.com/NthMetal/gbot2#readme",
   "devDependencies": {
     "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
     "@types/mongodb": "^3.3.14",
     "@types/node": "^13.1.7",
     "chai": "^4.2.0",
@@ -30,6 +53,7 @@
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
     "sinon": "^8.0.4",
+    "ts-mocha": "^6.0.0",
     "ts-node": "^8.6.2",
     "tslint": "^5.20.1",
     "typescript": "^3.7.4"
