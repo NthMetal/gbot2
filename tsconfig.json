@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "@testing/*": ["testing/*"],
+      "@shared/*": ["src/shared/*"]
+    }
+  },
+  "exclude": [
+    "**/testing/*"
+  ],
+  "lib": ["es2015"]
+}
