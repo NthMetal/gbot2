@@ -5,7 +5,7 @@ cache:
   directories:
     - "node_modules"
 before_install:
-  - cp ./src/auth.template.json ./src/auth.json
+  - cp ./src/config/auth.template.json ./src/config/auth.json
 script:
   - ./node_modules/.bin/nyc ts-mocha -p ./tsconfig.json ./**/*.spec.ts 
   - ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
