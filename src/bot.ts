@@ -14,6 +14,7 @@ gbot.on('ready', () => {
     });
 });
 
-gbot.login(auth.token);
+// Call this durring bootstrap process, TODO: Bootstrap cleanly with testing.
+// gbot.login(auth.token);
 
 export const bot = 5;

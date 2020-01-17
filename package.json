@@ -7,28 +7,6 @@
     "dev": "nodemon ./src/bot.ts",
     "test": "nyc ts-mocha -p ./tsconfig.json ./**/*.spec.ts || false"
   },
-  "nyc": {
-    "include": [
-      "**/*.ts",
-      "**/*.tsx"
-    ],
-    "exclude": [
-      "**/*.spec.ts"
-    ],
-    "extension": [
-      ".ts",
-      ".tsx"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "text-summary",
-      "html"
-    ],
-    "sourceMap": true,
-    "instrument": true
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NthMetal/gbot2.git"
