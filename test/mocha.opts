@@ -1,0 +1,4 @@
+# mocha.opts
+--require source-map-support/register
+--recursive
+**/*.spec.ts

@@ -1,14 +1,12 @@
 {
     "include": [
-        "**/*.ts",
-        "**/*.tsx"
+        "**/*.ts"
     ],
     "exclude": [
         "**/*.spec.ts"
     ],
     "extension": [
-        ".ts",
-        ".tsx"
+        ".ts"
     ],
     "require": [
         "ts-node/register"
@@ -18,5 +16,6 @@
         "html"
     ],
     "sourceMap": true,
-    "instrument": true
+    "instrument": true,
+    "all": true
 }
