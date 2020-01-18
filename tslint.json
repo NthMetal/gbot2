@@ -3,7 +3,7 @@
     "extends": [
         "tslint:recommended"
     ],
-    "rulesDirectory": [],
+    "rulesDirectory": [], 
     "jsRules": {},
     "rules": {
         "arrow-return-shorthand": true,
@@ -73,8 +73,6 @@
         "no-string-literal": false,
         "no-switch-case-fall-through": true,
         "no-consecutive-blank-lines": true,
-        "no-unused-variable": true,
-        "no-use-before-declare": true,
         "object-literal-sort-keys": false,
         "one-line": [
             true,
@@ -156,16 +154,7 @@
             "check-separator",
             "check-type"
         ],
-        "no-output-on-prefix": true,
-        "use-input-property-decorator": true,
-        "use-output-property-decorator": true,
-        "use-host-property-decorator": true,
         "no-input-rename": false,
-        "no-output-rename": true,
-        "use-life-cycle-interface": true,
-        "use-pipe-transform-interface": true,
-        "component-class-suffix": true,
-        "directive-class-suffix": true,
         "trailing-comma": [
             true,
             {

@@ -7,5 +7,6 @@ cache:
 before_install:
   - cp ./src/config/auth.template.json ./src/config/auth.json
 script:
+  - ./node_modules/.bin/tslint --project ./tsconfig.json ./src/**/*.ts
   - ./node_modules/.bin/nyc mocha
   - ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls

@@ -5,7 +5,8 @@
   "main": "bot.ts",
   "scripts": {
     "dev": "nodemon ./src/bot.ts",
-    "test": "nyc mocha || false"
+    "test": "nyc mocha || false",
+    "lint": "tslint --project ./tsconfig.json ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
