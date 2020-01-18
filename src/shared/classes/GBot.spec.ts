@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import { Client, ClientUser } from 'discord.js';
 import * as sinon from 'sinon';
 
-import { GBot } from './bot';
+import { GBot } from './GBot';
 
 describe('Test Bot', () => {
 
@@ -11,7 +11,7 @@ describe('Test Bot', () => {
 
     beforeEach(() => {
         client = new Client();
-        gbot = new GBot(client);
+        gbot = new GBot(client, '');
     });
 
     it('should call client login', () => {
@@ -19,6 +19,7 @@ describe('Test Bot', () => {
         const loginStub = sinon.stub(client, 'login');
         gbot.login();
         sinon.assert.calledOnce(loginStub);
+        sinon.assert.calledWith(loginStub, '');
     });
 
     it('should call client destroy', () => {

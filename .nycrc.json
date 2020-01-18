@@ -3,7 +3,8 @@
         "**/*.ts"
     ],
     "exclude": [
-        "**/*.spec.ts"
+        "**/*.spec.ts",
+        "src/bot.ts"
     ],
     "extension": [
         ".ts"

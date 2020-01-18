@@ -13,7 +13,8 @@
     ],
     "paths": {
       "@test/*": ["test/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@config/*": ["src/config/*"]
     }
   },
   "exclude": [

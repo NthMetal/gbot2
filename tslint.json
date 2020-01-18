@@ -16,6 +16,14 @@
             {
                 "name": "fdescribe",
                 "message": "focused test should be removed after they are no longer needed"
+            },
+            {
+                "name": [ "it", "only" ],
+                "message": "focused test should be removed after they are no longer needed"
+            },
+            {
+                "name": [ "describe", "only" ],
+                "message": "focused test should be removed after they are no longer needed"
             }
         ],
         "curly": [

@@ -1,39 +1,18 @@
 import { Client } from 'discord.js';
 
-import * as auth from './config/auth.json';
+import { GBot } from '@shared/classes/GBot';
 
-export class GBot {
-    public client;
+import * as auth from '@config/auth.json';
 
-    constructor(private discordClient: Client) {
-        this.client = this.discordClient;
-    }
+// Bootstraps GBot
+export const gbot = new GBot(new Client(), auth.token);
+// module.exports = new GBot(new Client(), auth.token);
 
-    login(): void {
-        this.client.login(auth.token);
-    }
+// Activates GBot
 
-    logout(): void {
-        this.client.destroy();
-    }
+if (auth.token) {
+    gbot.events();
+    gbot.login();
 
-    reset(): void {
-        this.logout();
-        this.login();
-    }
-
-    events(): void {
-        this.client.on('ready', () => {
-            console.log(`Logged in as ${this.client.user.tag}!`);
-            this.client.user.setPresence({
-                status: 'online',
-                game: {
-                    name: /** Playing */ 'with Reseyn'
-                }
-            });
-        });
-    }
-
+    gbot.logout();
 }
-
-export const gbot = new GBot(new Client());
