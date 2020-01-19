@@ -1,1 +1,1 @@
-sudo pm2 delete bot
+pm2 delete bot
