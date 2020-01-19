@@ -97,8 +97,8 @@
                 "grouped-imports": true,
                 "groups": [
                     {
-                        "name": "native angular components",
-                        "match": "^@angular",
+                        "name": "module alias",
+                        "match": "^module-alias/register$",
                         "order": 1
                     },
                     {

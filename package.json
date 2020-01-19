@@ -8,6 +8,10 @@
     "test": "nyc mocha || false",
     "lint": "tslint --project ./tsconfig.json ./src/**/*.ts"
   },
+  "_moduleAliases": {
+    "@shared": "dist/shared",
+    "@config": "dist/config"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NthMetal/gbot2.git"
@@ -40,6 +44,7 @@
   "dependencies": {
     "danbooru": "^3.1.0",
     "discord.js": "^11.5.1",
+    "module-alias": "^2.2.2",
     "mongodb": "^3.5.0",
     "pixiv-api-client": "^0.22.0",
     "pixiv-img": "^1.0.0",

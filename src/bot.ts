@@ -1,3 +1,5 @@
+import 'module-alias/register';
+
 import { Client } from 'discord.js';
 
 import { GBot } from '@shared/classes/GBot';
