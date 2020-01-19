@@ -17,7 +17,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    local_dir: dpl_cd_upload
+    local_dir: gbot2s3
     skip_cleanup: true
     on: &2
       repo: NthMetal/gbot2
