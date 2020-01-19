@@ -12,7 +12,7 @@ script:
   - ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
 after_success:
   - ./node_modules/.bin/tsc
-  - zip -r latest.zip ./dist ./appspec.yml
+  - zip -r latest.zip ./dist ./appspec.yml ./package.json ./start ./stop.sh
   - mkdir -p gbot2s3
   - mv latest.zip gbot2s3/latest.zip
 deploy:
