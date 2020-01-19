@@ -13,6 +13,8 @@ script:
 after_success:
   - ./node_modules/.bin/tsc
   - zip -r latest.zip ./dist
+  - mkdir -p gbot2s3
+  - mv latest.zip gbot2s3/latest.zip
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
