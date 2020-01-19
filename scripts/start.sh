@@ -1,4 +1,2 @@
-cd /home/ubuntu/
-cp ./auth/auth.json ./gbot/dist/config/auth.json
-mv ./package.json ./gbot/
-npm install
+cp /home/ubuntu/auth/auth.json /home/ubuntu/gbot/dist/config/auth.json
+npm install /home/ubuntu/gbot/

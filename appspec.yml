@@ -3,6 +3,8 @@ os: linux
 files:
   - source: ./dist
     destination: /home/ubuntu/gbot/
+  - source: ./package.json
+    destination: /home/ubuntu/gbot/
 hooks:
   ApplicationStop:
     - location: ./scripts/stop.sh
