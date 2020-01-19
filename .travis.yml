@@ -10,3 +10,26 @@ script:
   - ./node_modules/.bin/tslint --project ./tsconfig.json ./src/**/*.ts
   - ./node_modules/.bin/nyc mocha
   - ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
+after_success:
+  - ./node_modules/.bin/tsc
+  - zip -r latest.zip ./dist
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    local_dir: dpl_cd_upload
+    skip_cleanup: true
+    on: &2
+      repo: NthMetal/gbot2
+    bucket: gbot2bucket
+    region: us-east-1
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: gbot2bucket
+    key: latest.zip
+    bundle_type: zip
+    application: gbot2
+    deployment_group: gbot2deploymentgroup
+    region: us-east-1
+    on: *2
