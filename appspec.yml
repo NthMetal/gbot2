@@ -1,12 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: ./
+  - source: ./dist
     destination: /home/ubuntu/gbot/
 hooks:
   ApplicationStop:
-    - location: ./stop.sh
+    - location: ./scripts/stop.sh
       runas: root
+  BeforeInstall:
+    - location: ./scripts/before_install.sh
+      runas: root
+  # AfterInstall:
+  #   - location: /tmp/after_install.sh
+  #     runas: root
   ApplicationStart:
-    - location: ./start.sh
+    - location: ./scripts/start.sh
       runas: root
