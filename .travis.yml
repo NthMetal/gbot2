@@ -19,8 +19,6 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     local_dir: gbot2s3
     skip_cleanup: true
-    on: &2
-      repo: NthMetal/gbot2
     bucket: gbot2bucket
     region: us-east-1
   - provider: codedeploy
@@ -32,4 +30,3 @@ deploy:
     application: gbot2
     deployment_group: gbot2deploymentgroup
     region: us-east-1
-    on: *2
